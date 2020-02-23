@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
           ),
           body: Center(
             child: new Image(
-              image: NetworkImage('https://icons.veryicon.com/png/Business/Flat%20Finance/diamond.png')
+              image: AssetImage('images/diamond.png')
             ),
           ),
         ),
