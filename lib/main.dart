@@ -10,30 +10,29 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         backgroundColor: Colors.teal,
         body: SafeArea(
-          child: Row( // Row to Column
-            // crossAxisAlignment: CrossAxisAlignment.end,
-            crossAxisAlignment: CrossAxisAlignment.stretch,
+          child: Column(
             children: <Widget>[
-              Container(
-                height: 100.0,
-                // width: double.infinity,
-                color: Colors.white,
-                child: Text('Container'),
+              CircleAvatar(
+                radius: 50.0,
+                backgroundImage: AssetImage('images/0408.png'),
               ),
-              SizedBox(height: 20.0,),
-              Container(
-                height: 100.0,
-                // width: double.infinity,
-                color: Colors.blue,
-                child: Text('Container 2')
+              Text('Dext7',
+                style: TextStyle(
+                  fontFamily: 'Prompt',
+                  fontSize:40.0, 
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold
+                ),
               ),
-              SizedBox(height: 20.0,),
-              Container(
-                height: 100.0,
-                // width: double.infinity,
-                color: Colors.amber,
-                child: Text('Container 3')
-              ),
+              Text('Flutter developer',
+                style: TextStyle(
+                  fontFamily: 'AdventPro',
+                  fontSize: 20.0,
+                  color: Colors.white,
+                  letterSpacing: 2.5,
+                  fontWeight: FontWeight.bold
+                ),
+              )
             ],
           )
         )
