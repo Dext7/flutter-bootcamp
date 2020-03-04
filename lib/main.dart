@@ -34,6 +34,12 @@ class MyApp extends StatelessWidget {
                   fontWeight: FontWeight.bold
                 ),
               ),
+              SizedBox(
+                height: 20.0,
+                child: Divider(
+                  color: Colors.tealAccent
+                ),
+              ),
               Container(
                 color: Colors.white,
                 margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
