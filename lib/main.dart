@@ -23,17 +23,25 @@ class MyApp extends StatelessWidget {
 class DiceePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: <Widget>[
-        Expanded(
-          flex: 1,
-          child: Image.asset('images/dicee/dice1.png')
-        ),
-        Expanded(
-          flex: 1,
-          child: Image.asset('images/dicee/dice2.png')
-        )
-      ],
+    return Center(
+      child: Row(
+        children: <Widget>[
+          Expanded(
+            //flex: 1,
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Image.asset('images/dicee/dice1.png'),
+            )
+          ),
+          Expanded(
+            //flex: 1,
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Image.asset('images/dicee/dice2.png'),
+            )
+          )
+        ],
+      )
     );
   }
 }
