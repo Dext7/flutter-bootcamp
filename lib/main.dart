@@ -28,17 +28,17 @@ class DiceePage extends StatelessWidget {
         children: <Widget>[
           Expanded(
             //flex: 1,
-            child: Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Image.asset('images/dicee/dice1.png'),
-            )
+            child: FlatButton(
+                onPressed: null, 
+                child: Image.asset('images/dicee/dice1.png')
+                ),
           ),
           Expanded(
             //flex: 1,
-            child: Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Image.asset('images/dicee/dice2.png'),
-            )
+            child: FlatButton(
+              onPressed: null, 
+              child: Image.asset('images/dicee/dice2.png')
+            ),
           )
         ],
       )
