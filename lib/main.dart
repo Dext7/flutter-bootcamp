@@ -51,7 +51,7 @@ class _DiceeState extends State<Dicee> {
             //flex: 1,
             child: FlatButton(
                 onPressed: () {
-                  changeDiceeFace()
+                  changeDiceeFace();
                 }, 
                 child: Image.asset('images/dicee/dice$leftDiceeNumber.png')
                 ),
@@ -60,7 +60,7 @@ class _DiceeState extends State<Dicee> {
             //flex: 1,
             child: FlatButton(
               onPressed:  () {
-                  changeDiceeFace()
+                  changeDiceeFace();
                 }, 
               child: Image.asset('images/dicee/dice$rigthDiceeNumber.png')
             ),
