@@ -13,14 +13,24 @@ class MyApp extends StatelessWidget {
           title: Text('Dicee'),
           backgroundColor: Colors.red,
         ),
-        body: DiceePage(),
+        body: Dicee(),
       ),
       debugShowCheckedModeBanner: false,
     );
   }
 }
 
-class DiceePage extends StatelessWidget {
+class Dicee extends StatefulWidget {
+  Dicee({Key key}) : super(key: key);
+
+  @override
+  _DiceeState createState() => _DiceeState();
+}
+
+class _DiceeState extends State<Dicee> {
+
+  var leftDiceeNumber = 1;
+
   @override
   Widget build(BuildContext context) {
     return Center(
@@ -29,8 +39,12 @@ class DiceePage extends StatelessWidget {
           Expanded(
             //flex: 1,
             child: FlatButton(
-                onPressed: null, 
-                child: Image.asset('images/dicee/dice1.png')
+                onPressed: () {
+                  setState(() {
+                    leftDiceeNumber = 4;
+                  });
+                }, 
+                child: Image.asset('images/dicee/dice$leftDiceeNumber.png')
                 ),
           ),
           Expanded(
