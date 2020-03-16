@@ -33,6 +33,15 @@ class _DiceeState extends State<Dicee> {
   var leftDiceeNumber = 1;
   var rigthDiceeNumber = 1;
 
+
+  void changeDiceeFace() {
+    setState(() {
+      rigthDiceeNumber = Random().nextInt(6) + 1;
+      leftDiceeNumber = Random().nextInt(6) + 1;
+    });
+  }
+
+
   @override
   Widget build(BuildContext context) {
     return Center(
@@ -42,10 +51,7 @@ class _DiceeState extends State<Dicee> {
             //flex: 1,
             child: FlatButton(
                 onPressed: () {
-                  setState(() {
-                    rigthDiceeNumber = Random().nextInt(6) + 1;
-                    leftDiceeNumber = Random().nextInt(6) + 1;
-                  });
+                  changeDiceeFace()
                 }, 
                 child: Image.asset('images/dicee/dice$leftDiceeNumber.png')
                 ),
@@ -54,10 +60,7 @@ class _DiceeState extends State<Dicee> {
             //flex: 1,
             child: FlatButton(
               onPressed:  () {
-                  setState(() {
-                    leftDiceeNumber = Random().nextInt(6) + 1;
-                    rigthDiceeNumber = Random().nextInt(6) + 1;
-                  });
+                  changeDiceeFace()
                 }, 
               child: Image.asset('images/dicee/dice$rigthDiceeNumber.png')
             ),
